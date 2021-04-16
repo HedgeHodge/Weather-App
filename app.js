@@ -12,7 +12,7 @@ app.get("/", function(req, res) {
 
 app.post("/", function(req, res) {
   const query = req.body.cityName;
-  const appID = "5dd58a8f37395fb6252eea94171e9102";
+  const appID = process.env['API_KEY'];
   const units = "imperial";
   const url =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
